@@ -6,7 +6,6 @@ public class Lean extends Item {
 
     public Lean(Settings settings) {
         super(settings);
-
     }
     
 }
