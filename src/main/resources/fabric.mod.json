@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "radslearning",
-  "version": "${}",
+  "version": "${1.0.0}",
 
   "name": "RadVonSwag's Learning Mod",
   "description": "This mod has no real theme or purpose other than to learn how to mod Minecraft, basically",
@@ -9,8 +9,7 @@
     "RadVonSwag"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/RadVonSwag/RadVonSwags-Learning-Mod"
   },
 
   "license": "CC0-1.0",
@@ -32,7 +31,7 @@
     "minecraft": "1.18.x",
     "java": ">=17"
   },
-  "suggests": {
+  "suggests": {                                                                                                                                                                                        
     "another-mod": "*"
   }
 }
