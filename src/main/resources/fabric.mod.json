@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "radslearning",
+  "version": "${}",
+
+  "name": "RadVonSwag's Learning Mod",
+  "description": "This mod has no real theme or purpose other than to learn how to mod Minecraft, basically",
+  "authors": [
+    "RadVonSwag"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/radslearning/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.radslearning.Main.RadsLearning"
+    ]
+  },
+  "mixins": [
+    "radslearning.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
