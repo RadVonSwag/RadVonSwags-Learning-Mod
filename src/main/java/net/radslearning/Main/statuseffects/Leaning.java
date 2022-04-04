@@ -11,7 +11,7 @@ public class Leaning extends StatusEffect{
 
     final Potion NAUSEA = Potion.byId("nausea");
 
-    protected Leaning() {
+    public Leaning() {
         super(StatusEffectCategory.NEUTRAL, 0x6901b9);
     }
 

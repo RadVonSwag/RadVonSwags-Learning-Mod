@@ -3,6 +3,7 @@ package net.radslearning.Main;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -11,6 +12,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.item.Lean;
 import net.radslearning.Main.item.RadsLearningItems;
+import net.radslearning.Main.statuseffects.Leaning;
+import net.radslearning.Main.statuseffects.RadsLearningStatusEffects;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +26,9 @@ public class RadsLearning implements ModInitializer {
 	public static final String MOD_ID = "radslearning";
 	public static final ItemGroup RADS_LEARNING = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "stuff"), () -> new ItemStack(Items.KELP));
 
+	//temporary Status effect - will move to own file later
+	public static final StatusEffect LEANING = new Leaning();
+
 	@Override
 	public void onInitialize() {
 		register();
@@ -31,6 +37,8 @@ public class RadsLearning implements ModInitializer {
 	public static void register() {
 
 		RadsLearningItems.register();
+		Registry.register(Registry.STATUS_EFFECT, new Identifier("radslearning", "leaning"), LEANING);
+		//RadsLearningStatusEffects.register(); will figure this out lator
 		
 	}
 }
