@@ -26,9 +26,6 @@ public class RadsLearning implements ModInitializer {
 	public static final String MOD_ID = "radslearning";
 	public static final ItemGroup RADS_LEARNING = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "stuff"), () -> new ItemStack(Items.KELP));
 
-	//temporary Status effect - will move to own file later
-	public static final StatusEffect LEANING = new Leaning();
-
 	@Override
 	public void onInitialize() {
 		register();
@@ -37,8 +34,7 @@ public class RadsLearning implements ModInitializer {
 	public static void register() {
 
 		RadsLearningItems.register();
-		Registry.register(Registry.STATUS_EFFECT, new Identifier("radslearning", "leaning"), LEANING);
-		//RadsLearningStatusEffects.register(); will figure this out lator
+		RadsLearningStatusEffects.register();
 		
 	}
 }

@@ -9,10 +9,10 @@ import net.minecraft.util.Identifier;
 import net.radslearning.Main.RadsLearning;
 
 public class RadsLearningStatusEffects {
-    
-    public static final StatusEffect LEANING = add ("leaning", new Leaning());
 
     private static final Map<Identifier, StatusEffect> STATUS_EFFECTS = new LinkedHashMap();
+
+    public static final StatusEffect LEANING = add ("leaning", new Leaning());
     
     private static <E extends StatusEffect> E add(String name, E status_effect) {
         STATUS_EFFECTS.put(new Identifier(RadsLearning.MOD_ID, name), status_effect);
