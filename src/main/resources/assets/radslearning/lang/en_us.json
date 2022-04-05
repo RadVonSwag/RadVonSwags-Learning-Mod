@@ -1,5 +1,7 @@
 {
     "itemGroup.radslearning.stuff": "Rad's Stuff",
     
-    "item.radslearning.lean": "Lean"
+    "item.radslearning.lean": "Lean",
+
+    "effect.radslearning.leaning": "Leaning"
 }

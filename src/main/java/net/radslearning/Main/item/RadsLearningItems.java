@@ -19,7 +19,7 @@ public class RadsLearningItems {
     private static final Map<Identifier, Item> ITEMS = new LinkedHashMap();
     
     //public static final Lean LEAN = add("lean", new Lean(new FabricItemSettings().group(ItemGroup.BREWING).maxCount(1)));//new Lean(new FabricItemSettings().group(ItemGroup.BREWING).maxCount(1));
-    public static final Lean LEAN = add("lean", new Lean(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).maxCount(1).food(new FoodComponent.Builder().hunger(1).alwaysEdible().build())));
+    public static final Lean LEAN = add("lean", new Lean(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).maxCount(16).food(new FoodComponent.Builder().hunger(1).alwaysEdible().build())));
 
 
     private static <I extends Item> I add(String name, I item) {
