@@ -20,7 +20,9 @@ public class RadsLearningItems {
     
     //public static final Lean LEAN = add("lean", new Lean(new FabricItemSettings().group(ItemGroup.BREWING).maxCount(1)));//new Lean(new FabricItemSettings().group(ItemGroup.BREWING).maxCount(1));
     public static final Lean LEAN = add("lean", new Lean(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).maxCount(16).food(new FoodComponent.Builder().hunger(1).alwaysEdible().build())));
-
+    public static final Item COUGH_SYRUP = add("cough_syrup", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).maxCount(64)));
+    public static final Item LEMON_LIME_SODA = add("lemon_lime_soda", new PotionItem(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).maxCount(16)));
+    public static final Item GRAPE_JOLLY = add("grape_jolly", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).alwaysEdible().build())));
 
     private static <I extends Item> I add(String name, I item) {
         ITEMS.put(new Identifier(RadsLearning.MOD_ID, name), item);
