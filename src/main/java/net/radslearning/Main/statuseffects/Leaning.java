@@ -4,12 +4,12 @@ import net.minecraft.client.gl.EffectProgram;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.Potion;
 
 public class Leaning extends StatusEffect{
-
-    final Potion NAUSEA = Potion.byId("nausea");
 
     public Leaning() {
         super(StatusEffectCategory.NEUTRAL, 0x6901b9);
@@ -23,8 +23,9 @@ public class Leaning extends StatusEffect{
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
-            ((PlayerEntity) entity).addExhaustion(1 << amplifier);
-            //((PlayerEntity) entity).addStatusEffect(new StaticEffectInstance()));
+           entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 1200, 0));
+           entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 1200, 3));
+           entity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 1200, 0));
         }
     }
 
