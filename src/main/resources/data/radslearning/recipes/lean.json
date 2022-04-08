@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "   ",
+      "JSM",
+      " C "
+    ],
+    "key": {
+      "J": {
+        "tag": "radslearning:grape_jolly"
+      },
+        "S": {
+          "tag": "radslearning:lemon_lime_soda"
+        },
+          "C": {
+            "tag": "radslearning:styrofoam_cup"
+          },
+            "M": {
+              "tag": "radslearning:cough_syrup"
+            }
+    },
+    "result": {
+      "item": "radslearning:lean",
+      "count": 3
+    }
+  }
+

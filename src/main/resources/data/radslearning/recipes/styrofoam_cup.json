@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "   ",
+      "P P",
+      " P "
+    ],
+    "key": {
+      "P": {
+        "tag": "minecraft:paper"
+      }
+    },
+    "result": {
+      "item": "radslearning:styrofoam_cup",
+      "count": 3
+    }
+  }
+
