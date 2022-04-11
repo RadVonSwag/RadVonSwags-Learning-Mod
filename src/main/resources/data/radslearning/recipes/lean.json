@@ -1,27 +1,24 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-      "   ",
-      "JSM",
-      " C "
-    ],
-    "key": {
-      "J": {
-        "tag": "radslearning:grape_jolly"
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "radslearning:grape_jolly"
       },
-        "S": {
-          "tag": "radslearning:lemon_lime_soda"
-        },
-          "C": {
-            "tag": "radslearning:styrofoam_cup"
-          },
-            "M": {
-              "tag": "radslearning:cough_syrup"
-            }
-    },
+      {
+        "item": "radslearning:lemon_lime_soda"
+      },
+      {
+        "item": "radslearning:cough_syrup" 
+      },
+      {
+        "item": "radslearning:styrofoam_cup"
+      },
+      {
+        "item": "minecraft:ice"
+      }
+    ],
     "result": {
-      "item": "radslearning:lean",
-      "count": 3
+      "item": "radslearning:lean"
     }
   }
 
