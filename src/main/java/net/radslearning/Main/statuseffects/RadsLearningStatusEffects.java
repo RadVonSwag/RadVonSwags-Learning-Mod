@@ -10,7 +10,7 @@ import net.radslearning.Main.RadsLearning;
 
 public class RadsLearningStatusEffects {
 
-    private static final Map<Identifier, StatusEffect> STATUS_EFFECTS = new LinkedHashMap();
+    private static final Map<Identifier, StatusEffect> STATUS_EFFECTS = new LinkedHashMap<Identifier, StatusEffect>();
 
     public static final StatusEffect LEANING = add ("leaning", new Leaning());
     

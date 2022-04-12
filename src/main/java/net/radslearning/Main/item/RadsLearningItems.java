@@ -8,13 +8,14 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
 
 public class RadsLearningItems {
     
-    private static final Map<Identifier, Item> ITEMS = new LinkedHashMap();
+    private static final Map<Identifier, Item> ITEMS = new LinkedHashMap<Identifier, Item>();
     
     //public static final Lean LEAN = add("lean", new Lean(new FabricItemSettings().group(ItemGroup.BREWING).maxCount(1)));//new Lean(new FabricItemSettings().group(ItemGroup.BREWING).maxCount(1));
     public static final Lean LEAN = add("lean", new Lean(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).maxCount(16).food(new FoodComponent.Builder().hunger(1).alwaysEdible().build())));
@@ -22,7 +23,7 @@ public class RadsLearningItems {
     public static final Lemon_Lime_Soda LEMON_LIME_SODA = add("lemon_lime_soda", new Lemon_Lime_Soda(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 800, 0), 1).build()).maxCount(16)));
     public static final Item GRAPE_JOLLY = add("grape_jolly", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final Item STYROFOAM_CUP = add("styrofoam_cup", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING)));
-
+    public static final DebugItem DEBUG = add("debug", new DebugItem(new FabricItemSettings().group(RadsLearning.RADS_LEARNING)));
 
     private static <I extends Item> I add(String name, I item) {
         ITEMS.put(new Identifier(RadsLearning.MOD_ID, name), item);
