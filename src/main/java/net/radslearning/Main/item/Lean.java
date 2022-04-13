@@ -18,12 +18,8 @@ public class Lean extends Item {
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        
+        ItemStack result = super.finishUsing(stack, world, user);
         PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity) user : null;
-
-        if (this.isFood()) {
-            return playerEntity.eatFood(world, stack);
-        }
 
         if (!(playerEntity.isCreative())) {
             playerEntity.giveItemStack(new ItemStack(RadsLearningItems.STYROFOAM_CUP));
@@ -32,7 +28,7 @@ public class Lean extends Item {
         if (!(playerEntity == null)) {
             playerEntity.addStatusEffect(new StatusEffectInstance(RadsLearningStatusEffects.LEANING, 1200, 0));
         }
-        return stack;
+        return result;
     }
 
     @Override
