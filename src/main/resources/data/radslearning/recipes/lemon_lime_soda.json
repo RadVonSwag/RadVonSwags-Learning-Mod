@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "radslearning:lemon"
+      },
+      {
+        "item": "radslearning:lime"
+      },
+      {
+        "item": "radslearning:carbonated_water" 
+      },
+      {
+        "item": "minecraft:sugar"
+      }
+    ],
+    "result": {
+      "item": "radslearning:lemon_lime_soda"
+    }
+  }
+
