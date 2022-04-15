@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "item": "minecraft:water_bottle"
+        "item": "minecraft:potion"
       },
       {
         "item": "minecraft:coal"
