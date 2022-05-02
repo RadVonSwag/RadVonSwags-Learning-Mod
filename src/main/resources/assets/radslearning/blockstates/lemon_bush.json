@@ -1,0 +1,10 @@
+{
+    "variants": {
+      "age=0": {
+        "model": "tutorial:block/lemon_bush_stage0"
+      },
+      "age=1": {
+        "model": "tutorial:block/lemon_bush_stage1"
+      }
+    }
+}

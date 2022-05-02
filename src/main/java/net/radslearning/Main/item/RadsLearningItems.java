@@ -6,11 +6,13 @@ import java.util.Map;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
+import net.radslearning.Main.crops.RadsLearningCrops;
 
 public class RadsLearningItems {
     
@@ -24,7 +26,7 @@ public class RadsLearningItems {
     public static final Item STYROFOAM_CUP = add("styrofoam_cup", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING)));
     public static final DebugItem DEBUG = add("debug", new DebugItem(new FabricItemSettings().group(RadsLearning.RADS_LEARNING)));
     public static final DrinkItem CARBONATED_WATER = add("carbonated_water", new DrinkItem(new FabricItemSettings().group(RadsLearning.RADS_LEARNING)));
-    public static final Item LEMON = add("lemon", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
+    public static final Item LEMON = add("lemon", new AliasedBlockItem(RadsLearningCrops.LEMON_BUSH, new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final Item LIME = add("lime", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
 
 

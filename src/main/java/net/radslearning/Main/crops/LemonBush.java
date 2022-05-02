@@ -2,8 +2,10 @@ package net.radslearning.Main.crops;
 
 import javax.swing.text.html.BlockView;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.CropBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemConvertible;
@@ -16,8 +18,7 @@ public class LemonBush extends CropBlock {
     private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[]{Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D)};
     
     protected LemonBush(Settings settings) {
-        super(settings);
-        //TODO Auto-generated constructor stub
+        super(FabricBlockSettings.copyOf(Blocks.WHEAT));
     }
 
 public ItemConvertible getSeedsItem() {
