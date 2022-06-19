@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+      "all": "radslearning:block/lemon_wood_planks"
+    }
+  }

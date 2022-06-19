@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "radslearning:block/stripped_lemon_wood_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "radslearning:block/stripped_lemon_wood_log"
+    },
+    "axis=z": {
+      "model": "radslearning:block/stripped_lemon_wood_log",
+      "x": 90
+    }
+  }
+}

@@ -11,6 +11,11 @@
     "item.radslearning.lemon": "Lemon",
     "item.radslearning.lime": "Lime",
     
+    
+    "block.radslearning.lemon_wood_log": "Lemon Wood Log",
+    "block.radslearning.lemon_wodd_planks": "Lemon Wood Planks",
+    "block.radslearning.stripped_lemon_wood_log": "Stripped Lemon Wood Log",
+    
 
     "effect.radslearning.leaning": "Leaning"
 }

@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+      "end": "radslearning:block/stripped_lemon_wood_log_top",
+      "side": "radslearning:block/stripped_lemon_wood_log"
+    }
+  }
+
