@@ -13,8 +13,12 @@
     
     
     "block.radslearning.lemon_wood_log": "Lemon Wood Log",
-    "block.radslearning.lemon_wodd_planks": "Lemon Wood Planks",
+    "block.radslearning.lemon_wood_planks": "Lemon Wood Planks",
     "block.radslearning.stripped_lemon_wood_log": "Stripped Lemon Wood Log",
+    "block.radslearning.lemon_wood_leaves": "Lemon Wood Leaves",
+    "block.radslearning.lemon_wood_sapling": "Lemon Seeds",
+
+    
     
 
     "effect.radslearning.leaning": "Leaning"

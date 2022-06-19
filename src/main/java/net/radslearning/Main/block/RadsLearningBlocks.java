@@ -9,7 +9,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.FireBlock;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.Material;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
@@ -17,6 +17,8 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
+import net.radslearning.Main.block.custom.ModSaplingBlock;
+import net.radslearning.Main.world.feature.tree.LemonWoodSaplingGenerator;
 
 public class RadsLearningBlocks {
     
@@ -27,6 +29,8 @@ public class RadsLearningBlocks {
     public static final Block LEMON_WOOD_LOG = add("lemon_wood_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
     public static final Block LEMON_WOOD_PLANKS = add("lemon_wood_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
     public static final Block STRIPPED_LEMON_WOOD_LOG = add("stripped_lemon_wood_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block LEMON_WOOD_LEAVES = add("lemon_wood_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()));
+    public static final Block LEMON_WOOD_SAPLING = add("lemon_wood_sapling", new ModSaplingBlock(new LemonWoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
     private static <B extends Block> B add(String name, B block) {
         BLOCKS.put(new Identifier(RadsLearning.MOD_ID, name), block);
@@ -48,11 +52,11 @@ public class RadsLearningBlocks {
 
     private static void registerFlammableBlocks() {
         FlammableBlockRegistry instance = FlammableBlockRegistry.getDefaultInstance();
-        //FireBlock class for reference
 
         instance.add(LEMON_WOOD_LOG, 5, 5);
         instance.add(STRIPPED_LEMON_WOOD_LOG, 5, 5);
         instance.add(LEMON_WOOD_PLANKS, 5, 20);
+        instance.add(LEMON_WOOD_LEAVES, 30, 60);
     }
 
     private static void registerStrippableBlocks() {

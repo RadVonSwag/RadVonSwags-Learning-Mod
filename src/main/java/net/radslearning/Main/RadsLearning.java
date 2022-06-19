@@ -13,10 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class RadsLearning implements ModInitializer {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger("radslearning");
+	public static final Logger LOGGER = LoggerFactory.getLogger("Rad's Learning");
 	public static final String MOD_ID = "radslearning";
 	public static final ItemGroup RADS_LEARNING = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "stuff"), () -> new ItemStack(RadsLearningItems.LEAN));
 
@@ -26,6 +23,7 @@ public class RadsLearning implements ModInitializer {
 	}
 
 	public static void register() {
+		LOGGER.info("Registering Rad's Stuff");
 		RadsLearningItems.register();
 		RadsLearningBlocks.register();
 		RadsLearningStatusEffects.register();
