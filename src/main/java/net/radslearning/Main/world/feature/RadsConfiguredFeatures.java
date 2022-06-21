@@ -11,7 +11,6 @@ import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.feature.RandomFeatureConfig;
 import net.minecraft.world.gen.feature.RandomFeatureEntry;
-import net.minecraft.world.gen.feature.TreeConfiguredFeatures;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
@@ -28,7 +27,7 @@ public class RadsConfiguredFeatures {
                     new TwoLayersFeatureSize(1, 0, 1)).build());
 
     public static final PlacedFeature LEMON_WOOD_CHECKED = PlacedFeatures
-            .register("lemon_wood_checked", TreeConfiguredFeatures.OAK
+            .register("lemon_wood_checked", LEMON_WOOD_TREE
                     .withWouldSurviveFilter(RadsLearningBlocks.LEMON_WOOD_SAPLING));
 
     public static final ConfiguredFeature<RandomFeatureConfig, ?> LEMON_WOOD_SPAWN = ConfiguredFeatures

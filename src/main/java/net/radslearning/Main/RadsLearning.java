@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 import net.radslearning.Main.block.RadsLearningBlocks;
 import net.radslearning.Main.item.RadsLearningItems;
 import net.radslearning.Main.statuseffects.RadsLearningStatusEffects;
+import net.radslearning.Main.world.gen.RadsWorldGen;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,8 @@ public class RadsLearning implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		register();
+
+		RadsWorldGen.generateRadsWorldGen();
 	}
 
 	public static void register() {
