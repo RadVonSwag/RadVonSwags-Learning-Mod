@@ -27,8 +27,10 @@ public class RadsLearningBlocks {
 
     public static final Block TEST_BLOCK = add("test_block", new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f)));
     public static final Block LEMON_WOOD_LOG = add("lemon_wood_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block LEMON_WOOD = add("lemon_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
     public static final Block LEMON_WOOD_PLANKS = add("lemon_wood_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
     public static final Block STRIPPED_LEMON_WOOD_LOG = add("stripped_lemon_wood_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block STRIPPED_LEMON_WOOD = add("stripped_lemon_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
     public static final Block LEMON_WOOD_LEAVES = add("lemon_wood_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()));
     public static final Block LEMON_WOOD_SAPLING = add("lemon_wood_sapling", new ModSaplingBlock(new LemonWoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
@@ -54,7 +56,9 @@ public class RadsLearningBlocks {
         FlammableBlockRegistry instance = FlammableBlockRegistry.getDefaultInstance();
 
         instance.add(LEMON_WOOD_LOG, 5, 5);
+        instance.add(LEMON_WOOD, 5, 5);
         instance.add(STRIPPED_LEMON_WOOD_LOG, 5, 5);
+        instance.add(STRIPPED_LEMON_WOOD, 5, 5);
         instance.add(LEMON_WOOD_PLANKS, 5, 20);
         instance.add(LEMON_WOOD_LEAVES, 30, 60);
     }

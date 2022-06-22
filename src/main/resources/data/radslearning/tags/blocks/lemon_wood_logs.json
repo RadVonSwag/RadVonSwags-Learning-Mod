@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+      "radslearning:lemon_wood_log",
+      "radslearning:stripped_lemon_wood_log",
+      "radslearning:stripped_lemon_wood",
+      "radslearning:lemon_wood"
+    ]
+  }
