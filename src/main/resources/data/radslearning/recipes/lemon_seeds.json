@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "radslearning:lemon"
+      }
+    ],
+    "result": {
+      "item": "radslearning:lemon_seeds"
+    }
+  }
+
