@@ -18,6 +18,7 @@ import net.minecraft.block.PillarBlock;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.block.WoodenButtonBlock;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -31,17 +32,18 @@ public class RadsLearningBlocks {
     private static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<Identifier, Block>();
     private static final Map<Identifier, Item> BLOCK_ITEMS = new LinkedHashMap<Identifier, Item>();
 
-    public static final Block TEST_BLOCK = add("test_block", new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f)));
+    public static final Block MISSING_TEXTURE_BLOCK = add("missing_texture_block", new Block(FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE)));
     public static final Block LEMON_WOOD_LOG = add("lemon_wood_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
     public static final Block LEMON_WOOD = add("lemon_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
     public static final Block LEMON_WOOD_PLANKS = add("lemon_wood_planks", new Block(FabricBlockSettings.copyOf(Blocks.BIRCH_PLANKS)));
     public static final Block STRIPPED_LEMON_WOOD_LOG = add("stripped_lemon_wood_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
-    public static final Block STRIPPED_LEMON_WOOD = add("stripped_lemon_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
+    public static final Block STRIPPED_LEMON_WOOD = add("stripped_lemon_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_BIRCH_WOOD)));
     public static final Block LEMON_WOOD_LEAVES = add("lemon_wood_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_LEAVES).nonOpaque()));
     public static final Block LEMON_WOOD_SAPLING = add("lemon_wood_sapling", new RadsSaplingBlock(new LemonWoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block LEMON_WOOD_STAIRS = add("lemon_wood_stairs", new RadsStairsBlock(LEMON_WOOD_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(LEMON_WOOD_PLANKS)));
     public static final Block LEMON_WOOD_SLAB = add("lemon_wood_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_SLAB)));
     public static final Block LEMON_WOOD_FENCE = add("lemon_wood_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_FENCE)));
+    public static final Block LEMON_WOOD_BUTTON = add("lemon_wood_button", new RadsWoodenButtonBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_BUTTON)));
 
     private static <B extends Block> B add(String name, B block) {
         BLOCKS.put(new Identifier(RadsLearning.MOD_ID, name), block);
@@ -85,9 +87,16 @@ public class RadsLearningBlocks {
             super(baseBlockState, settings);
         }
     }
-    private static class RadsSaplingBlock extends SaplingBlock{
+    private static class RadsSaplingBlock extends SaplingBlock {
         public RadsSaplingBlock(SaplingGenerator generator, Settings settings) {
             super(generator, settings);
         }
+    }
+
+    private static class RadsWoodenButtonBlock extends WoodenButtonBlock {
+        protected RadsWoodenButtonBlock(Settings settings) {
+            super(settings);
+        }
+        
     }
 }
