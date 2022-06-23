@@ -12,11 +12,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
@@ -36,8 +39,8 @@ public class RadsLearningBlocks {
     public static final Block STRIPPED_LEMON_WOOD = add("stripped_lemon_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
     public static final Block LEMON_WOOD_LEAVES = add("lemon_wood_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()));
     public static final Block LEMON_WOOD_SAPLING = add("lemon_wood_sapling", new ModSaplingBlock(new LemonWoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
-    public static final Block LEMON_WOOD_STAIRS = add("lemon_wood_stairs",new RadsStairsBlock(LEMON_WOOD_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(LEMON_WOOD_PLANKS)));
-
+    public static final Block LEMON_WOOD_STAIRS = add("lemon_wood_stairs", new RadsStairsBlock(LEMON_WOOD_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(LEMON_WOOD_PLANKS)));
+    public static final Block LEMON_WOOD_SLAB = add("lemon_wood_slab", new SlabBlock(AbstractBlock.Settings.of(Material.WOOD, MapColor.PALE_YELLOW).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
 
     private static <B extends Block> B add(String name, B block) {
         BLOCKS.put(new Identifier(RadsLearning.MOD_ID, name), block);
@@ -66,6 +69,8 @@ public class RadsLearningBlocks {
         instance.add(STRIPPED_LEMON_WOOD, 5, 5);
         instance.add(LEMON_WOOD_PLANKS, 5, 20);
         instance.add(LEMON_WOOD_LEAVES, 30, 60);
+        instance.add(LEMON_WOOD_STAIRS, 5, 20);
+        instance.add(LEMON_WOOD_SLAB, 5, 20);
     }
 
     private static void registerStrippableBlocks() {
