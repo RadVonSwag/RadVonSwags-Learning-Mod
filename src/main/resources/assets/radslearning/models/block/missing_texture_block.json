@@ -1,6 +1,11 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-      "all": "radslearning:block/missing_texture_block"
-    }
+  "parent": "block/cube_all",
+  "textures": {
+    "north": "radslearning:block/missing_texture_block_alt",
+    "south": "radslearning:block/missing_texture_block_alt",
+    "east": "radslearning:block/missing_texture_block",
+    "west": "radslearning:block/missing_texture_block",
+    "up": "radslearning:block/missing_texture_block",
+    "down": "radslearning:block/missing_texture_block"
   }
+}

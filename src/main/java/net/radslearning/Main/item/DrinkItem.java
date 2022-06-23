@@ -13,7 +13,6 @@ public class DrinkItem extends Item {
 
     public DrinkItem(Settings settings) {
         super(settings);
-        //TODO Auto-generated constructor stub
     }
 
     @Override

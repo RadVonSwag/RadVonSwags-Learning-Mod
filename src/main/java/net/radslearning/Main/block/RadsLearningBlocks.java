@@ -13,8 +13,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.Material;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
@@ -44,6 +44,7 @@ public class RadsLearningBlocks {
     public static final Block LEMON_WOOD_SLAB = add("lemon_wood_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_SLAB)));
     public static final Block LEMON_WOOD_FENCE = add("lemon_wood_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_FENCE)));
     public static final Block LEMON_WOOD_BUTTON = add("lemon_wood_button", new RadsWoodenButtonBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_BUTTON)));
+    public static final Block LEMON_WOOD_PRESSURE_PLATE = add("lemon_wood_pressure_plate", new RadsPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.BIRCH_PRESSURE_PLATE)));
 
     private static <B extends Block> B add(String name, B block) {
         BLOCKS.put(new Identifier(RadsLearning.MOD_ID, name), block);
@@ -96,6 +97,13 @@ public class RadsLearningBlocks {
     private static class RadsWoodenButtonBlock extends WoodenButtonBlock {
         protected RadsWoodenButtonBlock(Settings settings) {
             super(settings);
+        }
+        
+    }
+
+    private static class RadsPressurePlateBlock extends PressurePlateBlock {
+        protected RadsPressurePlateBlock(ActivationRule type, Settings settings) {
+            super(type, settings);
         }
         
     }

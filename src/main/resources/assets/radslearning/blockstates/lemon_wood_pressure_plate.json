@@ -1,0 +1,10 @@
+{
+    "variants": {
+      "powered=false": {
+        "model": "radslearning:block/lemon_wood_pressure_plate"
+      },
+      "powered=true": {
+        "model": "radslearning:block/lemon_wood_pressure_plate_down"
+      }
+    }
+  }
