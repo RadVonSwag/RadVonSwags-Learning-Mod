@@ -33,7 +33,7 @@ public class RadsLearningBlocks {
     private static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<Identifier, Block>();
     private static final Map<Identifier, Item> BLOCK_ITEMS = new LinkedHashMap<Identifier, Item>();
 
-    public static final Block MISSING_TEXTURE_BLOCK = add("missing_texture_block", new Block(FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE)));
+    public static final Block MISSING_TEXTURE_BLOCK = add("missing_texture_block", new Block(FabricBlockSettings.copyOf(Blocks.BLACK_CONCRETE).requiresTool()));
     public static final Block LEMON_WOOD_LOG = add("lemon_wood_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
     public static final Block LEMON_WOOD = add("lemon_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
     public static final Block LEMON_WOOD_PLANKS = add("lemon_wood_planks", new Block(FabricBlockSettings.copyOf(Blocks.BIRCH_PLANKS)));

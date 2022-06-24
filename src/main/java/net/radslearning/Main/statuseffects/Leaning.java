@@ -21,10 +21,10 @@ public class Leaning extends StatusEffect{
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
-            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 2, true, false));
-            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 2, true, false));
-            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1, true, false));
-            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 100, 4, true, false));
+            // entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 2, true, false));
+            // entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 2, true, false));
+            // entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1, true, false));
+            // entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 100, 4, true, false));
         }
     }
 }
