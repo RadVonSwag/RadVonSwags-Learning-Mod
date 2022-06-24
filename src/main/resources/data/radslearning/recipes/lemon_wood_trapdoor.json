@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "wooden_door",
+    "pattern": [
+      "WWW",
+      "WWW"
+    ],
+    "key": {
+      "W": {
+        "item": "radslearning:lemon_wood_planks"
+      }
+    },
+    "result": {
+      "item": "radslearning:lemon_wood_trapdoor",
+      "count": 2
+    }
+  }

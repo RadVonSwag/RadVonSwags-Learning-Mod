@@ -15,6 +15,7 @@ public class RadsBlockRenderLayerInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RadsLearningBlocks.LEMON_WOOD_LEAVES, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(RadsLearningBlocks.LEMON_WOOD_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RadsLearningBlocks.LEMON_WOOD_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RadsLearningBlocks.LEMON_WOOD_TRAPDOOR, RenderLayer.getCutout());
         
     }
 }

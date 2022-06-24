@@ -19,6 +19,7 @@ import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.block.WoodenButtonBlock;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.item.BlockItem;
@@ -47,6 +48,7 @@ public class RadsLearningBlocks {
     public static final Block LEMON_WOOD_BUTTON = add("lemon_wood_button", new RadsWoodenButtonBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_BUTTON)));
     public static final Block LEMON_WOOD_PRESSURE_PLATE = add("lemon_wood_pressure_plate", new RadsPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.BIRCH_PRESSURE_PLATE)));
     public static final Block LEMON_WOOD_DOOR = add("lemon_wood_door", new RadsDoorBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_DOOR).nonOpaque()));
+    public static final Block LEMON_WOOD_TRAPDOOR = add("lemon_wood_trapdoor", new RadsTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_TRAPDOOR).nonOpaque()));
 
 
     private static <B extends Block> B add(String name, B block) {
@@ -101,20 +103,23 @@ public class RadsLearningBlocks {
         protected RadsWoodenButtonBlock(Settings settings) {
             super(settings);
         }
-        
     }
 
     private static class RadsPressurePlateBlock extends PressurePlateBlock {
         protected RadsPressurePlateBlock(ActivationRule type, Settings settings) {
             super(type, settings);
         }
-        
     }
 
     private static class RadsDoorBlock extends DoorBlock {
         protected RadsDoorBlock(Settings settings) {
             super(settings);
         }
-        
+    }
+
+    private static class RadsTrapdoorBlock extends TrapdoorBlock {
+        protected RadsTrapdoorBlock(Settings settings) {
+            super(settings);
+        }
     }
 }
