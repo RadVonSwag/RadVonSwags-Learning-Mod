@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import net.radslearning.Main.block.RadsBlockRenderLayerInitializer;
 import net.radslearning.Main.block.RadsLearningBlocks;
 import net.radslearning.Main.item.RadsLearningItems;
 import net.radslearning.Main.statuseffects.RadsLearningStatusEffects;
@@ -21,8 +22,8 @@ public class RadsLearning implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		register();
-
 		RadsWorldGen.generateRadsWorldGen();
+		RadsBlockRenderLayerInitializer.renderBlockLayers();
 	}
 
 	public static void register() {
