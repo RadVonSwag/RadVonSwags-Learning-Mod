@@ -13,6 +13,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.PressurePlateBlock;
@@ -49,7 +50,7 @@ public class RadsLearningBlocks {
     public static final Block LEMON_WOOD_PRESSURE_PLATE = add("lemon_wood_pressure_plate", new RadsPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.BIRCH_PRESSURE_PLATE)));
     public static final Block LEMON_WOOD_DOOR = add("lemon_wood_door", new RadsDoorBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_DOOR).nonOpaque()));
     public static final Block LEMON_WOOD_TRAPDOOR = add("lemon_wood_trapdoor", new RadsTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_TRAPDOOR).nonOpaque()));
-
+    public static final Block LEMON_WOOD_FENCE_GATE = add("lemon_wood_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_FENCE_GATE)));
 
     private static <B extends Block> B add(String name, B block) {
         BLOCKS.put(new Identifier(RadsLearning.MOD_ID, name), block);
