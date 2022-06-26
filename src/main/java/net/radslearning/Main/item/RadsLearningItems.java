@@ -6,11 +6,10 @@ import java.util.Map;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.vehicle.BoatEntity;
+import net.radslearning.Main.entities.vehicles.RadsBoatEntity;
 import net.minecraft.item.BoatItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
@@ -29,7 +28,8 @@ public class RadsLearningItems {
     public static final DrinkItem CARBONATED_WATER = add("carbonated_water", new DrinkItem(new FabricItemSettings().group(RadsLearning.RADS_LEARNING)));
     public static final Item LEMON = add("lemon", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final Item LIME = add("lime", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
-    //public static final Item LEMON_WOOD_BOAT = add("lemon_wood_boat", (Item) new BoatItem(BoatEntity.Type.BIRCH, new FabricItemSettings().maxCount(1).group(ItemGroup.TRANSPORTATION)));
+    public static final Item LEMON_WOOD_BOAT = add("lemon_wood_boat", (Item) new BoatItem(RadsBoatEntity.LEMON_WOOD, new FabricItemSettings().maxCount(1).group(RadsLearning.RADS_LEARNING)));
+    //public static final Item LEMON_WOOD_BOAT = add("lemon_wood_boat", (Item) new BoatItem(BoatEntity.Type.BIRCH, new FabricItemSettings().maxCount(1).group(RadsLearning.RADS_LEARNING)));
 
     private static <I extends Item> I add(String name, I item) {
         ITEMS.put(new Identifier(RadsLearning.MOD_ID, name), item);

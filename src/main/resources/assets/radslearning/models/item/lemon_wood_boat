@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "radslearning:item/lemon_wood_boat"
+  }
+}
