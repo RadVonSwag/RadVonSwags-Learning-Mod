@@ -24,9 +24,10 @@ public class BoatEntityTypeMixin {
         EnumExtender.register(BoatEntity.Type.class, (name, args) -> {
             BoatEntity.Type entry = (BoatEntity.Type) (Object) new BoatEntityTypeMixin(name, field_7724.length, (Block) args[0], (String) args[1]);
             field_7724 = Arrays.copyOf(field_7724, field_7724.length + 1);
+            RadsLearning.LOGGER.info("Mixed BoatEntityType");
             return field_7724[field_7724.length - 1] = entry;
         });
-        RadsLearning.LOGGER.info("Mixed BoatEntityType");
+
     }
 
     private BoatEntityTypeMixin(String valueName, int ordinal, Block baseBlock, String name) {

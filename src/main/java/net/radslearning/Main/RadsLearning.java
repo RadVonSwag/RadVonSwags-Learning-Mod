@@ -29,7 +29,7 @@ public class RadsLearning implements ModInitializer {
 
 	public static void register() {
 		LOGGER.info("Registering Rad's Stuff");
-		//RadsLearningItems.register();
+		RadsLearningItems.register();
 		RadsLearningBlocks.register();
 		RadsLearningStatusEffects.register();
 

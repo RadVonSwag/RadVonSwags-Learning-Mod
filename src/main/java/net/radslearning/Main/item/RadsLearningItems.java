@@ -29,7 +29,6 @@ public class RadsLearningItems {
     public static final Item LEMON = add("lemon", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final Item LIME = add("lime", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final Item LEMON_WOOD_BOAT = add("lemon_wood_boat", (Item) new BoatItem(RadsBoatEntity.LEMON_WOOD, new FabricItemSettings().maxCount(1).group(RadsLearning.RADS_LEARNING)));
-    //public static final Item LEMON_WOOD_BOAT = add("lemon_wood_boat", (Item) new BoatItem(BoatEntity.Type.BIRCH, new FabricItemSettings().maxCount(1).group(RadsLearning.RADS_LEARNING)));
 
     private static <I extends Item> I add(String name, I item) {
         ITEMS.put(new Identifier(RadsLearning.MOD_ID, name), item);

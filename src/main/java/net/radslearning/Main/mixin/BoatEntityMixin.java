@@ -21,10 +21,11 @@ public abstract class BoatEntityMixin {
     @Inject(method = "asItem", at = @At(value = "FIELD", target = "Lnet/minecraft/item/Items;OAK_BOAT:Lnet/minecraft/item/Item;", opcode = Opcodes.GETSTATIC), cancellable = true)
     private void checkRadsBoats(CallbackInfoReturnable<Item> cir) {
         BoatEntity.Type type = this.getBoatType();
+        RadsLearning.LOGGER.info("Mixed BoatEntity");
+
         if (type != BoatEntity.Type.OAK) {
             if (type == RadsBoatEntity.LEMON_WOOD)
                 cir.setReturnValue(RadsLearningItems.LEMON_WOOD_BOAT);
         }
-        RadsLearning.LOGGER.info("Mixed BoatEntity");
     }
 }
