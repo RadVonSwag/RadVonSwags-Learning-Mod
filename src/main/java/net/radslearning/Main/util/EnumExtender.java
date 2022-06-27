@@ -1,3 +1,6 @@
+/**
+ * @author Imortal-Devs
+ */
 package net.radslearning.Main.util;
 
 import java.util.HashMap;
