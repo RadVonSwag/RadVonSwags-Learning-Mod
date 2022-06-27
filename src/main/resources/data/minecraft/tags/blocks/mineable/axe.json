@@ -2,7 +2,8 @@
     "replace": false,
     "values": [
       "#radslearning:lemon_wood_logs",
-      "radslearning:lemon_wood_planks"
+      "radslearning:lemon_wood_planks",
+      "#radslearning:signs"
     ]
   }
 

@@ -28,7 +28,6 @@ import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.SignType;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
 import net.radslearning.Main.util.RadsSignType;

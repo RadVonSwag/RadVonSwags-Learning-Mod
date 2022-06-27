@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "wooden_fence",
+    "pattern": [
+      "WWW",
+      "WWW",
+      " # "
+    ],
+    "key": {
+      "W": {
+        "item": "radslearning:lemon_wood_planks"
+      },
+      "#": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "radslearning:lemon_wood_sign",
+      "count": 3
+    }
+  }
