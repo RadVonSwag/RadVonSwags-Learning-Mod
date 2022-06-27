@@ -18,16 +18,20 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SignBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.TrapdoorBlock;
+import net.minecraft.block.WallSignBlock;
 import net.minecraft.block.WoodenButtonBlock;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.SignType;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
+import net.radslearning.Main.util.RadsSignType;
 import net.radslearning.Main.world.feature.tree.LemonWoodSaplingGenerator;
 
 public class RadsLearningBlocks {
@@ -51,10 +55,17 @@ public class RadsLearningBlocks {
     public static final Block LEMON_WOOD_DOOR = add("lemon_wood_door", new RadsDoorBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_DOOR).nonOpaque()));
     public static final Block LEMON_WOOD_TRAPDOOR = add("lemon_wood_trapdoor", new RadsTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_TRAPDOOR).nonOpaque()));
     public static final Block LEMON_WOOD_FENCE_GATE = add("lemon_wood_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_FENCE_GATE)));
+    public static final Block LEMON_WOOD_SIGN = addWithoutItem("lemon_wood_sign", new SignBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_SIGN), RadsSignType.LEMON_WOOD));
+    public static final Block LEMON_WOOD_WALL_SIGN = addWithoutItem("lemon_wood_wall_sign", new WallSignBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_WALL_SIGN).dropsLike(LEMON_WOOD_SIGN), RadsSignType.LEMON_WOOD));
 
     private static <B extends Block> B add(String name, B block) {
         BLOCKS.put(new Identifier(RadsLearning.MOD_ID, name), block);
         BLOCK_ITEMS.put(new Identifier(RadsLearning.MOD_ID, name), new BlockItem(block, new FabricItemSettings().group(RadsLearning.RADS_LEARNING)));
+        return block;
+    }
+
+    private static <B extends Block> B addWithoutItem(String name, B block) {
+        BLOCKS.put(new Identifier(RadsLearning.MOD_ID, name), block);
         return block;
     }
     

@@ -1,10 +1,11 @@
-package net.radslearning.Main.block;
+package net.radslearning.Main.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
+import net.radslearning.Main.block.RadsLearningBlocks;
 
 public class RadsBlockRenderLayerInitializer {
 
@@ -16,6 +17,6 @@ public class RadsBlockRenderLayerInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RadsLearningBlocks.LEMON_WOOD_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RadsLearningBlocks.LEMON_WOOD_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RadsLearningBlocks.LEMON_WOOD_TRAPDOOR, RenderLayer.getCutout());
-        
+
     }
 }

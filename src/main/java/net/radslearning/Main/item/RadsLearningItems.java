@@ -4,15 +4,18 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.radslearning.Main.entities.vehicles.RadsBoatEntity;
 import net.minecraft.item.BoatItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.item.SignItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
+import net.radslearning.Main.block.RadsLearningBlocks;
 
 public class RadsLearningItems {
     
@@ -29,6 +32,9 @@ public class RadsLearningItems {
     public static final Item LEMON = add("lemon", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final Item LIME = add("lime", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final BoatItem LEMON_WOOD_BOAT = add("lemon_wood_boat", new BoatItem(RadsBoatEntity.LEMON_WOOD, new FabricItemSettings().maxCount(1).group(RadsLearning.RADS_LEARNING)));
+    public static final SignItem LEMON_WOOD_SIGN = add("lemon_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsLearningBlocks.LEMON_WOOD_SIGN, RadsLearningBlocks.LEMON_WOOD_WALL_SIGN));
+
+
 
     private static <I extends Item> I add(String name, I item) {
         ITEMS.put(new Identifier(RadsLearning.MOD_ID, name), item);

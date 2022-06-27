@@ -5,10 +5,10 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.radslearning.Main.block.RadsBlockRenderLayerInitializer;
 import net.radslearning.Main.block.RadsLearningBlocks;
 import net.radslearning.Main.item.RadsLearningItems;
 import net.radslearning.Main.statuseffects.RadsLearningStatusEffects;
+import net.radslearning.Main.util.RadsBlockRenderLayerInitializer;
 import net.radslearning.Main.world.gen.RadsWorldGen;
 
 import org.slf4j.Logger;
