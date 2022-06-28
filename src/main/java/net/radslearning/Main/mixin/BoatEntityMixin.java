@@ -2,7 +2,6 @@ package net.radslearning.Main.mixin;
 
 import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.Item;
-import net.radslearning.Main.RadsLearning;
 import net.radslearning.Main.entities.vehicles.RadsBoatEntity;
 import net.radslearning.Main.item.RadsLearningItems;
 
@@ -21,7 +20,6 @@ public abstract class BoatEntityMixin {
     @Inject(method = "asItem", at = @At(value = "FIELD", target = "Lnet/minecraft/item/Items;OAK_BOAT:Lnet/minecraft/item/Item;", opcode = Opcodes.GETSTATIC), cancellable = true)
     private void checkRadsBoats(CallbackInfoReturnable<Item> cir) {
         BoatEntity.Type type = this.getBoatType();
-        RadsLearning.LOGGER.info("Mixed BoatEntity");
 
         if (type != BoatEntity.Type.OAK) {
             if (type == RadsBoatEntity.LEMON_WOOD)
