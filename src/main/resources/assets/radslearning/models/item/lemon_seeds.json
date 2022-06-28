@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "radslearning:block/lemon_wood_sapling"
+      "layer0": "radslearning:item/lemon_seeds"
     }
   }

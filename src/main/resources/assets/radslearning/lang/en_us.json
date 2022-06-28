@@ -11,6 +11,7 @@
     "item.radslearning.lemon": "Lemon",
     "item.radslearning.lime": "Lime",
     "item.radslearning.lemon_wood_boat": "Lemon Wood Boat",
+    "item.radslearning.lemon_seeds": "Lemon Seeds",
     
     "block.radslearning.missing_texture_block": "Missing Texture Block",
     "block.radslearning.lemon_wood_log": "Lemon Wood Log",
@@ -19,7 +20,7 @@
     "block.radslearning.stripped_lemon_wood_log": "Stripped Lemon Wood Log",
     "block.radslearning.stripped_lemon_wood": "Stripped Lemon Wood",
     "block.radslearning.lemon_wood_leaves": "Lemon Wood Leaves",
-    "block.radslearning.lemon_wood_sapling": "Lemon Seeds",
+    "block.radslearning.lemon_wood_sapling": "Lemon Wood Sapling",
     "block.radslearning.lemon_wood_stairs": "Lemon Wood Stairs",
     "block.radslearning.lemon_wood_slab": "Lemon Wood Slab",
     "block.radslearning.lemon_wood_fence": "Lemon Wood Fence",

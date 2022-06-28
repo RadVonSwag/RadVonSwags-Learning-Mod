@@ -18,11 +18,9 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.SignBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.TrapdoorBlock;
-import net.minecraft.block.WallSignBlock;
 import net.minecraft.block.WoodenButtonBlock;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.item.BlockItem;
@@ -54,8 +52,8 @@ public class RadsLearningBlocks {
     public static final Block LEMON_WOOD_DOOR = add("lemon_wood_door", new RadsDoorBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_DOOR).nonOpaque()));
     public static final Block LEMON_WOOD_TRAPDOOR = add("lemon_wood_trapdoor", new RadsTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_TRAPDOOR).nonOpaque()));
     public static final Block LEMON_WOOD_FENCE_GATE = add("lemon_wood_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_FENCE_GATE)));
-    public static final Block LEMON_WOOD_SIGN = addWithoutItem("lemon_wood_sign", new SignBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_SIGN), RadsSignType.LEMON_WOOD));
-    public static final Block LEMON_WOOD_WALL_SIGN = addWithoutItem("lemon_wood_wall_sign", new WallSignBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_WALL_SIGN).dropsLike(LEMON_WOOD_SIGN), RadsSignType.LEMON_WOOD));
+    public static final Block LEMON_WOOD_SIGN = addWithoutItem("lemon_wood_sign", new RadsSignBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_SIGN), RadsSignType.LEMON_WOOD));
+    public static final Block LEMON_WOOD_WALL_SIGN = addWithoutItem("lemon_wood_wall_sign", new RadsWallSignBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_WALL_SIGN).dropsLike(LEMON_WOOD_SIGN), RadsSignType.LEMON_WOOD));
 
     private static <B extends Block> B add(String name, B block) {
         BLOCKS.put(new Identifier(RadsLearning.MOD_ID, name), block);
@@ -91,10 +89,19 @@ public class RadsLearningBlocks {
         instance.add(LEMON_WOOD_LEAVES, 30, 60);
         instance.add(LEMON_WOOD_STAIRS, 5, 20);
         instance.add(LEMON_WOOD_SLAB, 5, 20);
+        instance.add(LEMON_WOOD_FENCE, 5, 20);
+        instance.add(LEMON_WOOD_FENCE_GATE, 5, 20);
+        instance.add(LEMON_WOOD_BUTTON, 5, 20);
+        instance.add(LEMON_WOOD_PRESSURE_PLATE, 5, 20);
+        instance.add(LEMON_WOOD_DOOR, 5, 20);
+        instance.add(LEMON_WOOD_TRAPDOOR, 5, 20);
+        instance.add(LEMON_WOOD_SIGN, 5, 20);
+        instance.add(LEMON_WOOD_WALL_SIGN, 5, 20);
     }
 
     private static void registerStrippableBlocks() {
         StrippableBlockRegistry.register(LEMON_WOOD_LOG, STRIPPED_LEMON_WOOD_LOG);
+        StrippableBlockRegistry.register(LEMON_WOOD, STRIPPED_LEMON_WOOD);
     }
 
     //Custom Classes for protected constructor access

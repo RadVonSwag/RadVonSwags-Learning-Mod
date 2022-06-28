@@ -10,7 +10,7 @@
     "SignTypeAccessor"
   ],
   "client": [
-    "ExampleMixin"
+    "RadsSpecialMixin"
 
   ],
   "injectors": {

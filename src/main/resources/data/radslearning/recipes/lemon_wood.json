@@ -7,11 +7,11 @@
     ],
     "key": {
       "#": {
-        "item": "minecraft:lemon_wood_log"
+        "item": "radslearning:lemon_wood_log"
       }
     },
     "result": {
-      "item": "minecraft:lemon_wood",
+      "item": "radslearning:lemon_wood",
       "count": 3
     }
   }

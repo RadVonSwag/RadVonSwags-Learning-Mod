@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "radslearning:lemon"
+        },
+        {
+            "item": "radslearning:lemon"
+        },
+        {
+            "tag": "minecraft:saplings"
+        }
+    ],
+    "result": {
+        "item": "radslearning:lemon_wood_sapling"
+    }
+}

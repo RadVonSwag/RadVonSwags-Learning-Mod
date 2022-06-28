@@ -20,7 +20,6 @@ public class RadsLearningItems {
     
     private static final Map<Identifier, Item> ITEMS = new LinkedHashMap<Identifier, Item>();
     
-    //public static final Lean LEAN = add("lean", new Lean(new FabricItemSettings().group(ItemGroup.BREWING).maxCount(1)));//new Lean(new FabricItemSettings().group(ItemGroup.BREWING).maxCount(1));
     public static final Lean LEAN = add("lean", new Lean(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).maxCount(16).food(new FoodComponent.Builder().hunger(1).alwaysEdible().build())));
     public static final Item COUGH_SYRUP = add("cough_syrup", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).maxCount(64)));
     public static final DrinkItem LEMON_LIME_SODA = add("lemon_lime_soda", new DrinkItem(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 800, 0), 1).build()).maxCount(16)));
@@ -32,7 +31,7 @@ public class RadsLearningItems {
     public static final Item LIME = add("lime", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final BoatItem LEMON_WOOD_BOAT = add("lemon_wood_boat", new BoatItem(RadsBoatEntity.LEMON_WOOD, new FabricItemSettings().maxCount(1).group(RadsLearning.RADS_LEARNING)));
     public static final SignItem LEMON_WOOD_SIGN = add("lemon_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsLearningBlocks.LEMON_WOOD_SIGN, RadsLearningBlocks.LEMON_WOOD_WALL_SIGN));
-
+    public static final Item LEMON_SEEDS = add("lemon_seeds", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(0).build()).group(RadsLearning.RADS_LEARNING)));
 
 
     private static <I extends Item> I add(String name, I item) {

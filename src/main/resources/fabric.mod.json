@@ -33,5 +33,7 @@
   },
   "suggests": {                                                                                                                                                                                        
     "another-mod": "*"
-  }
+  },
+
+  "accessWidener": "radslearning.accesswidener"
 }
