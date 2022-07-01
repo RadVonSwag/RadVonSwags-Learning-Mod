@@ -14,9 +14,9 @@ import net.minecraft.item.SignItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
-import net.radslearning.Main.block.RadsLearningBlocks;
+import net.radslearning.Main.block.RadsBlocks;
 
-public class RadsLearningItems {
+public class RadsItems {
     
     private static final Map<Identifier, Item> ITEMS = new LinkedHashMap<Identifier, Item>();
     
@@ -30,7 +30,7 @@ public class RadsLearningItems {
     public static final Item LEMON = add("lemon", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final Item LIME = add("lime", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING).food(new FoodComponent.Builder().hunger(1).saturationModifier(1).build())));
     public static final BoatItem LEMON_WOOD_BOAT = add("lemon_wood_boat", new BoatItem(RadsBoatEntity.LEMON_WOOD, new FabricItemSettings().maxCount(1).group(RadsLearning.RADS_LEARNING)));
-    public static final SignItem LEMON_WOOD_SIGN = add("lemon_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsLearningBlocks.LEMON_WOOD_SIGN, RadsLearningBlocks.LEMON_WOOD_WALL_SIGN));
+    public static final SignItem LEMON_WOOD_SIGN = add("lemon_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsBlocks.LEMON_WOOD_SIGN, RadsBlocks.LEMON_WOOD_WALL_SIGN));
     public static final Item LEMON_SEEDS = add("lemon_seeds", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(0).build()).group(RadsLearning.RADS_LEARNING)));
 
 
