@@ -3,7 +3,7 @@ package net.radslearning.Main.mixin;
 import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.Item;
 import net.radslearning.Main.entities.vehicles.RadsBoatEntity;
-import net.radslearning.Main.item.RadsLearningItems;
+import net.radslearning.Main.item.RadsItems;
 
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -23,7 +23,7 @@ public abstract class BoatEntityMixin {
 
         if (type != BoatEntity.Type.OAK) {
             if (type == RadsBoatEntity.LEMON_WOOD)
-                cir.setReturnValue(RadsLearningItems.LEMON_WOOD_BOAT);
+                cir.setReturnValue(RadsItems.LEMON_WOOD_BOAT);
         }
     }
 }

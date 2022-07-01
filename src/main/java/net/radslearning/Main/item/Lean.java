@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
-import net.radslearning.Main.statuseffects.RadsLearningStatusEffects;
+import net.radslearning.Main.statuseffects.RadsStatusEffects;
 
 public class Lean extends Item {
 
@@ -22,11 +22,11 @@ public class Lean extends Item {
         PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity) user : null;
 
         if (!(playerEntity.isCreative())) {
-            playerEntity.giveItemStack(new ItemStack(RadsLearningItems.STYROFOAM_CUP));
+            playerEntity.giveItemStack(new ItemStack(RadsItems.STYROFOAM_CUP));
 		}
         
         if (!(playerEntity == null)) {
-            playerEntity.addStatusEffect(new StatusEffectInstance(RadsLearningStatusEffects.LEANING, 1200, 0));
+            playerEntity.addStatusEffect(new StatusEffectInstance(RadsStatusEffects.LEANING, 1200, 0));
         }
         return result;
     }

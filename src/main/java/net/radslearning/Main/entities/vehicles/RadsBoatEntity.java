@@ -2,7 +2,7 @@ package net.radslearning.Main.entities.vehicles;
 
 import net.minecraft.entity.vehicle.BoatEntity.Type;
 
-import static net.radslearning.Main.block.RadsLearningBlocks.*;
+import static net.radslearning.Main.block.RadsBlocks.*;
 import static net.radslearning.Main.util.EnumExtender.add;
 
 public class RadsBoatEntity {
