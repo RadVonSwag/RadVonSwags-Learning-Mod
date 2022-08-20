@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/outer_stairs",
+    "textures": {
+      "bottom": "radslearning:block/lime_wood_planks",
+      "top": "radslearning:block/lime_wood_planks",
+      "side": "radslearning:block/lime_wood_planks"
+    }
+  }

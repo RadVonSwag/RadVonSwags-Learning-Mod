@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+      "cross": "radslearning:block/lime_wood_sapling"
+    }
+  }
