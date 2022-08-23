@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/door_bottom",
+    "textures": {
+      "top": "radslearning:block/lime_wood_door_top",
+      "bottom": "radslearning:block/lime_wood_door_bottom"
+    }
+  }

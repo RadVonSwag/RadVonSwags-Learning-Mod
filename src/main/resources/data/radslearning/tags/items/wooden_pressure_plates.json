@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "radslearning:lemon_wood_pressure_plate"
+        "radslearning:lemon_wood_pressure_plate",
+        "radslearning:lime_wood_pressure_plate"
     ]
 }

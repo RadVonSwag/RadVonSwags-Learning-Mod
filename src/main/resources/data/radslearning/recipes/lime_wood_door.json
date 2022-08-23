@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "wooden_door",
+    "pattern": [
+      "WW",
+      "WW",
+      "WW"
+    ],
+    "key": {
+      "W": {
+        "item": "radslearning:lime_wood_planks"
+      }
+    },
+    "result": {
+      "item": "radslearning:lime_wood_door",
+      "count": 3
+    }
+  }
