@@ -11,6 +11,7 @@
     "item.radslearning.lemon": "Lemon",
     "item.radslearning.lime": "Lime",
     "item.radslearning.lemon_wood_boat": "Lemon Wood Boat",
+    "item.radslearning.lime_wood_boat": "Lime Wood Boat",
     "item.radslearning.lemon_seeds": "Lemon Seeds",
     
     "block.radslearning.missing_texture_block": "Missing Texture Block",
@@ -46,6 +47,7 @@
     "block.radslearning.lime_wood_door": "Lime Wood Door",
     "block.radslearning.lime_wood_trapdoor": "Lime Wood Trapdoor",
     "block.radslearning.lime_wood_fence_gate": "Lime Wood Fence Gate",
+    "block.radslearning.lime_wood_sign": "Lime Wood Sign",
 
 
     

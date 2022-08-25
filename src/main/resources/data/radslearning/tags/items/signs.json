@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "radslearning:lemon_wood_sign"
+        "radslearning:lemon_wood_sign",
+        "radslearning:lime_wood_sign"
     ]
 }
