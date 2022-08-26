@@ -24,6 +24,8 @@ public abstract class BoatEntityMixin {
         if (type != BoatEntity.Type.OAK) {
             if (type == RadsBoatEntity.LEMON_WOOD)
                 cir.setReturnValue(RadsItems.LEMON_WOOD_BOAT);
+            else if (type == RadsBoatEntity.LIME_WOOD)
+                cir.setReturnValue(RadsItems.LIME_WOOD_BOAT);
         }
     }
 }
