@@ -32,6 +32,7 @@ public class RadsItems {
     public static final BoatItem LEMON_WOOD_BOAT = add("lemon_wood_boat", new BoatItem(RadsBoatEntity.LEMON_WOOD, new FabricItemSettings().maxCount(1).group(RadsLearning.RADS_LEARNING)));
     public static final BoatItem LIME_WOOD_BOAT = add("lime_wood_boat", new BoatItem(RadsBoatEntity.LIME_WOOD, new FabricItemSettings().maxCount(1).group(RadsLearning.RADS_LEARNING)));
     public static final SignItem LEMON_WOOD_SIGN = add("lemon_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsBlocks.LEMON_WOOD_SIGN, RadsBlocks.LEMON_WOOD_WALL_SIGN));
+    public static final SignItem LIME_WOOD_SIGN = add("lime_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsBlocks.LIME_WOOD_SIGN, RadsBlocks.LIME_WOOD_WALL_SIGN));
     public static final Item LEMON_SEEDS = add("lemon_seeds", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(0).build()).group(RadsLearning.RADS_LEARNING)));
 
 
