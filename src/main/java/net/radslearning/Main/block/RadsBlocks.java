@@ -33,6 +33,7 @@ import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
 import net.radslearning.Main.util.RadsSignType;
 import net.radslearning.Main.world.feature.tree.LemonWoodSaplingGenerator;
+import net.radslearning.Main.world.feature.tree.LimeWoodSaplingGenerator;
 
 public class RadsBlocks {
     
@@ -67,7 +68,7 @@ public class RadsBlocks {
     public static final Block STRIPPED_LIME_WOOD_LOG = add("stripped_lime_wood_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
     public static final Block STRIPPED_LIME_WOOD = add("stripped_lime_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_BIRCH_WOOD)));
     public static final Block LIME_WOOD_LEAVES = add("lime_wood_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.JUNGLE_LEAVES).nonOpaque()));
-    public static final Block LIME_WOOD_SAPLING = add("lime_wood_sapling", new RadsSaplingBlock(new LemonWoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).nonOpaque()));
+    public static final Block LIME_WOOD_SAPLING = add("lime_wood_sapling", new RadsSaplingBlock(new LimeWoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).nonOpaque()));
     public static final Block LIME_WOOD_STAIRS = add("lime_wood_stairs", new RadsStairsBlock(LIME_WOOD_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(LIME_WOOD_PLANKS)));
     public static final Block LIME_WOOD_SLAB = add("lime_wood_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_SLAB)));
     public static final Block LIME_WOOD_FENCE = add("lime_wood_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_FENCE)));

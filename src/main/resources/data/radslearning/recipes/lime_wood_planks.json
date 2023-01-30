@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "planks",
+    "ingredients": [
+      {
+        "tag": "radslearning:lime_wood_logs"
+      }
+    ],
+    "result": {
+      "item": "radslearning:lime_wood_planks",
+      "count": 4
+    }
+  }

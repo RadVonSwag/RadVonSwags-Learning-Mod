@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "boat",
+    "pattern": [
+      "# #",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "radslearning:lime_wood_planks"
+      }
+    },
+    "result": {
+      "item": "radslearning:lime_wood_boat"
+    }
+  }

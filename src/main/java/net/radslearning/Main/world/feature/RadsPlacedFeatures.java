@@ -11,4 +11,9 @@ public class RadsPlacedFeatures {
                     .withPlacement(VegetationPlacedFeatures
                             .modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1))));
 
+     public static final PlacedFeature LIME_WOOD_PLACED = PlacedFeatures
+            .register("lime_wood_placed", RadsConfiguredFeatures.LIME_WOOD_SPAWN
+                    .withPlacement(VegetationPlacedFeatures
+                            .modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1))));                       
+
 }

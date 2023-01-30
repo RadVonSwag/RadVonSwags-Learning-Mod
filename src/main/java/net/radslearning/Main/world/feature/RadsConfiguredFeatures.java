@@ -18,7 +18,8 @@ import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
 import net.radslearning.Main.block.RadsBlocks;
 
 public class RadsConfiguredFeatures {
-    public static final ConfiguredFeature<?, ?> LEMON_WOOD_TREE = Feature.TREE
+    //LEMON WOOD TREE
+        public static final ConfiguredFeature<?, ?> LEMON_WOOD_TREE = Feature.TREE
             .configure(new TreeFeatureConfig.Builder(
                     new RadsBlockStateProvider(RadsBlocks.LEMON_WOOD_LOG.getDefaultState()),
                     new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
@@ -36,6 +37,26 @@ public class RadsConfiguredFeatures {
                             new RandomFeatureConfig(List.of(
                                     new RandomFeatureEntry(LEMON_WOOD_CHECKED, 0.8f)),
                                     LEMON_WOOD_CHECKED)));
+
+     //LIME WOOD TREE
+     public static final ConfiguredFeature<?, ?> LIME_WOOD_TREE = Feature.TREE
+     .configure(new TreeFeatureConfig.Builder(
+             new RadsBlockStateProvider(RadsBlocks.LIME_WOOD_LOG.getDefaultState()),
+             new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+             new RadsBlockStateProvider(RadsBlocks.LIME_WOOD_LEAVES.getDefaultState()),
+             new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+             new TwoLayersFeatureSize(1, 0, 1)).build());
+
+public static final PlacedFeature LIME_WOOD_CHECKED = PlacedFeatures
+     .register("lime_wood_checked", LIME_WOOD_TREE
+             .withWouldSurviveFilter(RadsBlocks.LIME_WOOD_SAPLING));
+
+public static final ConfiguredFeature<RandomFeatureConfig, ?> LIME_WOOD_SPAWN = ConfiguredFeatures
+     .register("lime_wood_spawn", Feature.RANDOM_SELECTOR
+             .configure(
+                     new RandomFeatureConfig(List.of(
+                             new RandomFeatureEntry(LIME_WOOD_CHECKED, 0.8f)),
+                             LIME_WOOD_CHECKED)));                             
 
     public static void register() {
 

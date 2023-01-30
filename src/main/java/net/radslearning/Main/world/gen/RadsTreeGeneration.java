@@ -11,9 +11,14 @@ public class RadsTreeGeneration {
 
     public static void generateTrees() {
         generateLemonWoodTree();
+        generateLimeWoodTree();
     }
 
     public static void generateLemonWoodTree() {
         BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, BuiltinRegistries.PLACED_FEATURE.getKey(RadsPlacedFeatures.LEMON_WOOD_PLACED).get());
+    }
+
+    public static void generateLimeWoodTree() {
+        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, BuiltinRegistries.PLACED_FEATURE.getKey(RadsPlacedFeatures.LIME_WOOD_PLACED).get());
     }
 }
