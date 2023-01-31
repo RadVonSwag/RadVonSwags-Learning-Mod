@@ -3,6 +3,7 @@ package net.radslearning.Main.block;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -25,6 +26,7 @@ import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.block.WallSignBlock;
 import net.minecraft.block.WoodenButtonBlock;
 import net.minecraft.block.sapling.SaplingGenerator;
+import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -101,6 +103,7 @@ public class RadsBlocks {
         
         registerFlammableBlocks();
         registerStrippableBlocks();
+        registerBiomeMap();
     }
 
     private static void registerFlammableBlocks() {
@@ -147,6 +150,10 @@ public class RadsBlocks {
 
         StrippableBlockRegistry.register(LIME_WOOD_LOG, STRIPPED_LIME_WOOD_LOG);
         StrippableBlockRegistry.register(LIME_WOOD, STRIPPED_LIME_WOOD);
+    }
+
+    private static void registerBiomeMap() {
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), LIME_WOOD_LEAVES);
     }
 
     //Custom Classes for protected constructor access
