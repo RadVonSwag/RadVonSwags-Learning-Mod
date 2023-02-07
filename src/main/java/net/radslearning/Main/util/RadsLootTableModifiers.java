@@ -26,35 +26,35 @@ public class RadsLootTableModifiers {
     private static final Identifier VILLAGE_TAIGA_HOUSE_ID = new Identifier("minecraft", "chests/village/village_taiga_house");
     private static final Identifier PILLAGER_OUTPOST_ID = new Identifier("minecraft", "chests/pillager_outpost");
     private static final Identifier SIMPLE_DUNGEON_ID = new Identifier("minecraft", "chests/simple_dungeon");
+    private static final Identifier JUNGLE_TEMPLE_ID = new Identifier("minecraft", "chests/jungle_temple");
 
     public static void ModifyLootTables() {
+        coughSyrupLoot();
+    }
+
+    private static void coughSyrupLoot() {
         LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
             if (VILLAGE_PLAINS_HOUSE_ID.equals(id)) {
-                //LOGGER.info("Modifying Village Plains House loot table...");
-                modify(VILLAGE_PLAINS_HOUSE_ID, resourceManager, manager, id, supplier, setter);
+                addCoughSyrup(VILLAGE_PLAINS_HOUSE_ID, resourceManager, manager, id, supplier, setter);
             } else if (VILLAGE_DESERT_HOUSE_ID.equals(id)) {
-               // LOGGER.info("Modifying Village Desert House loot table...");
-                modify(VILLAGE_DESERT_HOUSE_ID, resourceManager, manager, id, supplier, setter);
+                addCoughSyrup(VILLAGE_DESERT_HOUSE_ID, resourceManager, manager, id, supplier, setter);
             } else if (VILLAGE_SAVANNA_HOUSE_ID.equals(id)) {
-                //LOGGER.info("Modifying Village Savanna House loot table...");
-                modify(VILLAGE_SAVANNA_HOUSE_ID, resourceManager, manager, id, supplier, setter);
+                addCoughSyrup(VILLAGE_SAVANNA_HOUSE_ID, resourceManager, manager, id, supplier, setter);
             } else if (VILLAGE_SNOWY_HOUSE_ID.equals(id)) {
-                //LOGGER.info("Modifying Village Snowy House loot table...");
-                modify(VILLAGE_SNOWY_HOUSE_ID, resourceManager, manager, id, supplier, setter);
+                addCoughSyrup(VILLAGE_SNOWY_HOUSE_ID, resourceManager, manager, id, supplier, setter);
             } else if (VILLAGE_TAIGA_HOUSE_ID.equals(id)) {
-                //LOGGER.info("Modifying Village Taiga House loot table...");
-                modify(VILLAGE_TAIGA_HOUSE_ID, resourceManager, manager, id, supplier, setter);
+                addCoughSyrup(VILLAGE_TAIGA_HOUSE_ID, resourceManager, manager, id, supplier, setter);
             } else if (PILLAGER_OUTPOST_ID.equals(id)) {
-                //LOGGER.info("Modifying Pillager Outpost loot table...");
-                modify(PILLAGER_OUTPOST_ID, resourceManager, manager, id, supplier, setter);
+                addCoughSyrup(PILLAGER_OUTPOST_ID, resourceManager, manager, id, supplier, setter);
             } else if (SIMPLE_DUNGEON_ID.equals(id)) {
-              //  LOGGER.info("Modifying Simple Dungeon loot table...");
-                modify(SIMPLE_DUNGEON_ID, resourceManager, manager, id, supplier, setter);
+                addCoughSyrup(SIMPLE_DUNGEON_ID, resourceManager, manager, id, supplier, setter);
+            } else if (JUNGLE_TEMPLE_ID.equals(id)) {
+                addCoughSyrup(JUNGLE_TEMPLE_ID, resourceManager, manager, id, supplier, setter);
             }
         }));
     }
 
-    private static void modify(Identifier table, ResourceManager resourceManager, LootManager manager, Identifier id, FabricLootSupplierBuilder supplier, LootTableSetter setter) {
+    private static void addCoughSyrup(Identifier table, ResourceManager resourceManager, LootManager manager, Identifier id, FabricLootSupplierBuilder supplier, LootTableSetter setter) {
             if (table.equals(id)) {
                 LOGGER.info("Modifying " + table.toString() + " loot table...");
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
