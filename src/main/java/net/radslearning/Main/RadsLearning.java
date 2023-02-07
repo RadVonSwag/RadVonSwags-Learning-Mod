@@ -9,6 +9,7 @@ import net.radslearning.Main.block.RadsBlocks;
 import net.radslearning.Main.item.RadsItems;
 import net.radslearning.Main.statuseffects.RadsStatusEffects;
 import net.radslearning.Main.util.RadsBlockRenderLayerInitializer;
+import net.radslearning.Main.util.RadsLootTableModifiers;
 import net.radslearning.Main.world.gen.RadsWorldGen;
 
 import org.slf4j.Logger;
@@ -25,6 +26,7 @@ public class RadsLearning implements ModInitializer {
 		register();
 		RadsWorldGen.generateRadsWorldGen();
 		RadsBlockRenderLayerInitializer.renderBlockLayers();
+		RadsLootTableModifiers.ModifyLootTables();
 	}
 
 	public static void register() {
