@@ -7,10 +7,12 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.radslearning.Main.entities.vehicles.RadsBoatEntity;
+import net.radslearning.Main.mixin.BrewingRecipeRegister;
 import net.minecraft.item.BoatItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
+import net.minecraft.potion.Potions;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.radslearning.Main.RadsLearning;
@@ -34,6 +36,7 @@ public class RadsItems {
     public static final SignItem LEMON_WOOD_SIGN = add("lemon_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsBlocks.LEMON_WOOD_SIGN, RadsBlocks.LEMON_WOOD_WALL_SIGN));
     public static final SignItem LIME_WOOD_SIGN = add("lime_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsBlocks.LIME_WOOD_SIGN, RadsBlocks.LIME_WOOD_WALL_SIGN));
     public static final Item LEMON_SEEDS = add("lemon_seeds", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(0).build()).group(RadsLearning.RADS_LEARNING)));
+    public static final Item HEALING_CRYSTALS = add("healing_crystals", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING)));
 
 
     private static <I extends Item> I add(String name, I item) {
@@ -44,6 +47,11 @@ public class RadsItems {
     public static void register() {
         for (Identifier id : ITEMS.keySet()) {
             Registry.register(Registry.ITEM, id, ITEMS.get(id));
+            registerBrewingRecipes();
         }
-    }    
+    }   
+    
+    public static void registerBrewingRecipes() {
+        //BrewingRecipeRegister.registerPotionRecipe(Potions.MUNDANE, HEALING_CRYSTALS, COUGH_SYRUP);
+    }
 }

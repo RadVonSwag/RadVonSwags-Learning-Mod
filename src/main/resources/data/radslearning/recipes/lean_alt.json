@@ -8,7 +8,7 @@
         "item": "radslearning:lemon_lime_soda"
       },
       {
-        "item": "radslearning:cough_syrup"
+        "potion": "minecraft:homemade_cough_syrup"
       },
       {
         "item": "radslearning:styrofoam_cup"
