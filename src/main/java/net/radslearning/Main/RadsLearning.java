@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.radslearning.Main.block.RadsBlocks;
 import net.radslearning.Main.item.RadsItems;
+import net.radslearning.Main.potion.RadsPotions;
 import net.radslearning.Main.statuseffects.RadsStatusEffects;
 import net.radslearning.Main.util.RadsBlockRenderLayerInitializer;
 import net.radslearning.Main.util.RadsLootTableModifiers;
@@ -34,6 +35,7 @@ public class RadsLearning implements ModInitializer {
 		RadsItems.register();
 		RadsBlocks.register();
 		RadsStatusEffects.register();
+		RadsPotions.register();
 
 		
 	}

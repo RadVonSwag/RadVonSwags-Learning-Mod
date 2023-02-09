@@ -13,6 +13,13 @@
     "item.radslearning.lemon_wood_boat": "Lemon Wood Boat",
     "item.radslearning.lime_wood_boat": "Lime Wood Boat",
     "item.radslearning.lemon_seeds": "Lemon Seeds",
+    "item.radslearning.healing_crystals": "Healing Crystals",
+
+    "item.minecraft.potion.effect.homemade_cough_syrup": "Homemade Cough Syrup",
+    "item.minecraft.potion.splash_effect.homemade_cough_syrup": "Splash Bottle of Homemade Cough Syrup",
+    "item.minecraft.potion.lingering_effect.homemade_cough_syrup": "Lingering Bottle of Homemade Cough Syrup",
+    "item.minecraft.tipped_arrow.effect.homemade_cough_syrup": "Arrow of Cough Syrup",
+
     
     "block.radslearning.missing_texture_block": "Missing Texture Block",
     "block.radslearning.lemon_wood_log": "Lemon Wood Log",

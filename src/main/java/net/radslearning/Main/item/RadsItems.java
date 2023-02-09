@@ -34,6 +34,7 @@ public class RadsItems {
     public static final SignItem LEMON_WOOD_SIGN = add("lemon_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsBlocks.LEMON_WOOD_SIGN, RadsBlocks.LEMON_WOOD_WALL_SIGN));
     public static final SignItem LIME_WOOD_SIGN = add("lime_wood_sign", new SignItem(new Item.Settings().maxCount(16).group(RadsLearning.RADS_LEARNING), RadsBlocks.LIME_WOOD_SIGN, RadsBlocks.LIME_WOOD_WALL_SIGN));
     public static final Item LEMON_SEEDS = add("lemon_seeds", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(0).build()).group(RadsLearning.RADS_LEARNING)));
+    public static final Item HEALING_CRYSTALS = add("healing_crystals", new Item(new FabricItemSettings().group(RadsLearning.RADS_LEARNING)));
 
 
     private static <I extends Item> I add(String name, I item) {
